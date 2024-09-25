@@ -12,6 +12,42 @@
       </script>
       <style>
           .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Ajuste ce chiffre selon ton besoin */
+    margin: auto; /* Centrer le conteneur */
+}
+
+          .card {
+    flex: 1 1 200px; /* Change le minimum à 150px si besoin */
+    max-width: 280px; /* La largeur maximale que tu veux */
+    margin: 10px; /* Ajoute un peu d'espace entre les cartes */
+}
+
+          @media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem; /* Réduit la taille des titres */
+    }
+
+    .card {
+        width: 90%; /* Prend 90% de la largeur de l'écran */
+        margin: 10px auto; /* Centrer les cartes */
+    }
+
+    #desc {
+        padding-left: 10px; /* Réduire le padding */
+        margin-left: 0; /* Supprimer le margin */
+        padding-top: 20px; /* Ajuster le padding */
+    }
+}
+
+          img {
+    max-width: 100%; /* Cela devrait déjà être dans ton code */
+    height: auto; /* Pour garder le ratio */
+}
+
+          
+          .container {
     width: 90%; /* 90% de la largeur de l'écran */
     max-width: 1200px; /* Maximum de 1200px pour les grands écrans */
 }
