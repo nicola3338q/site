@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Préfécture Oujda </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <script>
+        window.console = window.console || function(t) {};
+      </script>
+      <style>
+        * {
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+  nav ul li {
+    margin-bottom: 10px;
+  }
+  #logo {
+    width: 100px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-size: 1rem; /* responsive base font size */
+}
+@media (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 1 1 200px; /* Chaque élément occupe 200px minimum, mais s'étire pour remplir l'espace */
+}
+
+h1 {
+  font-size: 2.6rem;
+  padding-right: 30px;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+li {
+  font-size: 2rem;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-head {
+  background: #b69267;
+  color: #b69267;
+  padding: 20px 0;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  padding: 0 20px;
+}
+
+nav h1 {
+  margin-right: auto;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+  align-items: center;
+  margin-left: auto;
+}
+ul li {
+  list-style: none;
+  margin-left: 62px;
+  font-size: 1rem;
+}
+ul li a {
+  color: #b69267;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  transition: color 0.4s ease-in-out;
+}
+ul li a:hover {
+  color: rgb(10, 47, 95);
+}
+#logo {
+  height: 90px;
+  width: 90px;
+}
+#titre {
+  text-align: center;
+  font-style: oblique;
+  line-height: 1;
+  font-weight: bold;
+  font-size: 120px;
+  font-family: 'mega_freshregular';
+}
+.hero {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  min-height: 90vh;
+  background: url("hih.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 80px solid #b69267;
+}
+
+#desc {
+  padding-left: 150px;
+  font-size: 20px;
+  line-height: 28px;
+  padding-top: 50px;
+  box-sizing: border-box;
+  margin-left: 1cm;
+  text-align: justify;
+  font-weight: 400;
+  color: rgba(2, 31, 60, 0.87);
+  letter-spacing: 0;
+}
+span {
+  font-weight: bold;
+}
+
+.card {
+  width: 280px;
+  height: 360px;
+  padding: 2rem 1rem;
+  background: #d3c6c6;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 7px 10px rgb(2, 2, 2);
+  transition: transform 0.5s ease-in-out;
+  margin: 0 10px;
+}
+.nouveau {
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  padding-bottom: 70px;
+  padding-top: 70px;
+  font-family: 'mega_freshregular';   
+}
+.chrono{
+  font-family: 'mega_freshregular';
+}
+.card:hover {
+  transform: translateY(20px);
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(182, 176, 167, 0.5), rgb(61, 33, 2));
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+.card:hover:before {
+  opacity: 1;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card .info {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+  opacity: 1;
+  transform: translateY(30px);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.card:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.card .info h1 {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+.card .info .btn {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #f3f2f2;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.4s ease-in-out;
+}
+.card .info .btn:hover {
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+p {
+  padding-bottom: 10px;
+  font-weight: bold;
+  color:#000;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+.timeline {
+--white: #fff;
+background-color: #b69267;
+--columbia-blue: #cee9e4;
+--midnight-green: rgb(56, 28, 18);
+--yellow:         #b69267;
+--timeline-gradient: rgb(187, 146, 127) 0%, rgb(180, 154, 133) 50%,
+  rgba(75, 65, 53, 0) 100%;
+}
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+button {
+background: transparent;
+border: none;
+cursor: pointer;
+outline: none;
+}
+a {
+color: inherit;
+}
+img {
+max-width: 100%;
+height: auto;
+}
+body {
+font: normal 16px/1.5 "Inter", sans-serif;
+background: var(--columbia-blue);
+color: var(--black);
+margin-bottom: 50px;
+}
+.section {
+padding: 50px 0;
+}
+.section .container {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+text-align: center;
+}
+.section h1 {
+font-size: 2.5rem;
+line-height: 1.25;
+}
+.section h2 {
+font-size: 1.3rem;
+}
+.timeline {
+position: relative;
+white-space: nowrap;
+max-width: 1400px;
+padding: 0 10px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 320px auto;
+grid-gap: 20px;
+}
+.timeline::before,
+.timeline::after {
+content: "";
+position: absolute;
+top: 0;
+bottom: 30px;
+width: 100px;
+z-index: 2;
+}
+.timeline::after {
+right: 0;
+background: linear-gradient(270deg, var(--timeline-gradient));
+}
+.timeline::before {
+left: 340px;
+background: linear-gradient(90deg, var(--timeline-gradient));
+}
+.timeline .info {
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 20px 40px;
+color: var(--white);
+background: var(--midnight-green);
+white-space: normal;
+border-radius: 10px;
+}
+.timeline .info img {
+margin-bottom: 20px;
+}
+.timeline .info p {
+margin-top: 10px;
+color: var(--crystal);
+}
+.timeline .info a {
+text-decoration: none;
+}
+.timeline ol::-webkit-scrollbar {
+height: 12px;
+}
+.timeline ol::-webkit-scrollbar-thumb,
+.timeline ol::-webkit-scrollbar-track {
+border-radius: 92px;
+}
+.timeline ol::-webkit-scrollbar-thumb {
+background: var(--midnight-green);
+}
+.timeline ol::-webkit-scrollbar-track {
+background: var(--yellow);
+}
+.timeline ol {
+font-size: 0;
+padding: 250px 0;
+transition: all 1s;
+overflow-x: scroll;
+-ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+scrollbar-color: var(--yellow) var(--midnight-green);
+}
+.timeline ol li {
+position: relative;
+display: inline-block;
+list-style-type: none;
+width: 160px;
+height: 5px;
+background: var(--white);
+scroll-snap-align: start;
+}
+.timeline ol li:last-child {
+width: 340px;
+}
+.timeline ol li:not(:first-child) {
+margin-left: 14px;
+}
+.timeline ol li:not(:last-child)::after {
+content: "";
+position: absolute;
+top: 50%;
+left: calc(100% + 1px);
+bottom: 0;
+width: 16px;
+height: 16px;
+transform: translateY(-50%);
+border-radius: 50%;
+background: var(--midnight-green);
+z-index: 1;
+}
+.timeline ol li div {
+position: absolute;
+left: calc(100% + 7px);
+width: 280px;
+padding: 15px;
+font-size: 1rem;
+white-space: normal;
+color: var(--black);
+background: var(--white);
+border-radius: 0 10px 10px 10px;
+}
+.timeline ol li div::before {
+content: "";
+position: absolute;
+top: 100%;
+left: 0;
+width: 0;
+height: 0;
+border-style: solid;
+}
+.timeline ol li:nth-child(odd) div {
+top: -16px;
+transform: translateY(-100%);
+border-radius: 10px 10px 10px 0;
+}
+.timeline ol li:nth-child(odd) div::before {
+top: 100%;
+border-width: 8px 8px 0 0;
+border-color: var(--white) transparent transparent transparent;
+}
+.timeline ol li:nth-child(even) div {
+top: calc(100% + 16px);
+}
+.timeline ol li:nth-child(even) div::before {
+top: -8px;
+border-width: 8px 0 0 8px;
+border-color: transparent transparent transparent var(--white);
+}
+.timeline time {
+display: block;
+font-size: 1.4rem;
+font-weight: bold;
+margin-bottom: 8px;
+color: var(--midnight-green);
+}
+@media screen and (max-width: 800px) {
+.timeline {
+  display: block;
+}
+.timeline::before,
+.timeline::after {
+  width: 50px;
+}
+.timeline::before {
+  left: 0;
+}
+.timeline .info {
+  display: none;
+}
+}
+.page-footer {
+position: fixed;
+right: 0;
+bottom: 0;
+display: flex;
+align-items: center;
+padding: 5px;
+z-index: 2;
+color: var(--black);
+background: var(--columbia-blue);
+}
+.page-footer a {
+display: flex;
+margin-left: 4px;
+}
+.date{
+  font-size: 40px;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: sans-serif;
+}
+a,
+a:visited,
+a:active {
+text-decoration: none;
+color: inherit;
+transition: all 0.2s ease;
+}
+a:hover {
+color: #0f1185;
+}
+
+
+main {
+  margin: 20vh auto;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 60px;
+}
+
+footer {
+  background-color: #b69267;
+  color: #dfdfdf;
+  padding: 30px 100px;
+}
+
+footer h3 {
+  color: white;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+  justify-items: center;
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+}
+
+.footer-col {
+  width: max-content;
+}
+
+.footer-col > * {
+  display: block;
+  width: max-content;
+}
+
+.footer-col > h3 {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.footer-col a {
+  padding: 5px 0;
+}
+
+.footer-middle {
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.footer-middle h3 {
+  margin-bottom: 10px;
+}
+
+.footer-middle label {
+  display: block;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+}
+
+input {
+  padding: 10px;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  color: white;
+  background-color: #17094b;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+a.social {
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+a.social:hover {
+  background-color: #191063;
+  color: white;
+}
+
+a.social:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .footer-top {
+    justify-items: start;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  footer {
+    padding: 30px;
+  }
+
+  .footer-middle {
+    text-align: left;
+  }
+}
+
+
+.todo{
+padding-left: 30px;
+padding-right: 30px;
+}
+.demo-title {
+text-align: center;
+font-size: 3rem;
+margin-bottom: 50px;
+    font-family: 'mega_freshregular';
+}
+.todo .pricing-table {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.todo .pricing-table .pricing-option {
+width: 28%;
+background:#b69267;
+padding: 2%;
+text-align: center;
+transition: all 0.3s ease-in-out;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 300px; /* Fixed height */
+}
+.todo .pricing-table .pricing-option:nth-child(even) {
+margin: 0 2%;
+}
+.todo .pricing-table .pricing-option:hover {
+cursor: pointer;
+background: white;
+box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.3);
+transform: scale(1.04);
+}
+.todo .pricing-table .pricing-option:hover h1,
+.todo .pricing-table .pricing-option:hover p {
+color: rgb(56, 28, 18);
+}
+.todo .pricing-table .pricing-option hr {
+border: none;
+}
+.todo .pricing-table .pricing-option h1 {
+margin: 10px 0;
+color: rgb(56, 28, 18);
+transition: all 0.3s ease-in-out;
+font-family: 'mega_freshregular';
+font-weight: solid;
+font-size: 45px;
+}
+.todo .pricing-table .pricing-option p {
+color: white;
+padding: 0 10px;
+line-height: 1.3;
+font-size: 20px;
+}
+.todo .pricing-table .pricing-option .price {
+position: relative;
+}
+.todo .pricing-table .pricing-option .price .back {
+transition: all 0.3s ease-in-out;
+}
+.todo .pricing-table .pricing-option .price .back a.button {
+background: rgb(56, 28, 18);
+padding: 15px 20px;
+display: inline-block;
+text-decoration: none;
+color: white;
+font-size: 13px;
+margin-top: 10px;
+text-transform: uppercase;
+transition: all 0.3s ease-in-out;
+}
+.todo .pricing-table .pricing-option .price .back a.button:hover {
+background: rgb(56, 28, 18);
+}
+.sect .wrapper {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.sect .wrapper .card {
+background: white;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin: 20px;
+overflow: hidden;
+transition: transform 0.3s;
+width: 30%;
+}
+.sect .wrapper .card:hover {
+transform: translateY(-10px);
+}
+.sect .wrapper .card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+.sect .wrapper .card .info {
+padding: 20px;
+text-align: center;
+}
+.sect .wrapper .card .info p {
+margin: 0;
+font-size: 1.2rem;
+color: black;
+}
+.sect .wrapper .card .info .btn {
+display: inline-block;
+margin-top: 15px;
+padding: 10px 20px;
+background: rgb(56, 28, 18);
+color: white;
+text-decoration: none;
+border-radius: 5px;
+transition: background 0.3s;
+}
+.sect .wrapper .card .info .btn:hover {
+background: rgb(56, 28, 18);
+}
+@media screen and (max-width: 600px) {
+.todo .pricing-table .pricing-option,
+.sect .wrapper .card {
+  width: 90%;
+  margin: 20px auto;
+}
+}
+@media (min-width: 576px) {
+.title-box {
+    margin-bottom: 40px;
+}
+}
+@media (min-width: 576px) {
+.title-box .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+}
+
+
+
+/* General Styles */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Raleway, Helvetica, sans-serif;
+  background: #f1f1f1;
+}
+
+.modal-btn {
+  padding: 10px 14px;
+  font-size: 18px;
+  margin: 100px auto;
+  display: block;
+  min-width: 150px;
+  cursor: pointer;
+}
+
+/* Modal without image */
+.modal-container-no-img {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: visibility 0.4s;
+  z-index: 1000;
+}
+
+.modal-container-no-img.active {
+  visibility: visible;
+}
+
+.modal-container-no-img .overlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #333333d3;
+  transition: opacity 0.4s 0.2s ease-out;
+}
+
+.modal-container-no-img.active .overlay {
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+
+.modal-container-no-img .modal {
+  opacity: 0;
+  width: 95%;
+  max-width: 500px;
+  min-width: 300px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.modal-container-no-img.active .modal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
+}
+
+.modal-container-no-img .close-modal {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: #ff365e;
+  color: #fff;
+}
+
+/* Modal with image */
+.modal-container {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: visibility 0.4s;
+  z-index: 1000;
+}
+
+.modal-container.active {
+  visibility: visible;
+}
+
+.modal-container .overlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #333333d3;
+  transition: opacity 0.4s 0.2s ease-out;
+}
+
+.modal-container.active .overlay {
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+
+.modal-container .modal {
+  opacity: 0;
+  width: 95%;
+  max-width: 500px;
+  min-width: 300px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.modal-container.active .modal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
+}
+
+.modal-container .close-modal {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: #ff365e;
+  color: #fff;
+}
+
+.modal h1 {
+  margin-bottom: 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+}
+
+.modal p {
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+@media print {
+.table, .table__body {
+overflow: visible;
+height: auto !important;
+width: auto !important;
+}
+}
+
+
+
+
+
+
+
+/* Style de la section contenant le tableau */
+.table__body {
+  padding: 20px; /* Espacement autour du tableau */
+  background-color: #ffffff; /* Fond blanc pour le tableau */
+  border-radius: 8px; /* Coins arrondis pour la section du tableau */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.562); /* Ombre légère autour du tableau */
+  max-width: 1200px; /* Largeur maximale pour le tableau */
+  margin: auto; /* Centrer la section du tableau */
+}
+
+/* Styles du tableau */
+table {
+  width: 100%; /* Le tableau occupe toute la largeur de son conteneur */
+  border-collapse: collapse; /* Supprimer les espaces entre les cellules */
+}
+
+/* Bordures et styles des cellules du tableau */
+table, th, td {
+  border: 1px solid #dddddd; /* Bordure légère pour les cellules */
+}
+
+th, td {
+  padding: 12px; /* Espacement à l'intérieur des cellules */
+  text-align: left; /* Alignement du texte à gauche */
+}
+
+/* Style des en-têtes du tableau */
+th {
+  background-color: #f2f2f2; /* Fond gris clair pour les en-têtes */
+  font-weight: bold; /* Mettre le texte en gras */
+}
+
+/* Styles pour les icônes de flèche */
+.icon-arrow {
+  font-size: 0.8em; /* Taille de police réduite pour les icônes de flèche */
+  vertical-align: middle; /* Alignement vertical au milieu du texte */
+  margin-left: 5px; /* Espacement à gauche des icônes de flèche */
+  color: #cee9e4;
+}
+
+/* Styles pour les images */
+.yous {
+  width: 100px; /* Largeur fixe pour les images */
+  height: 100px; /* Hauteur fixe pour les images */
+  object-fit: cover; /* Ajuste l'image pour couvrir le carré sans déformation */
+  border-radius: 4px; /* Coins légèrement arrondis pour les images */
+  border: 1px solid #dddddd; /* Bordure légère autour des images */
+}
+.table__body {
+  display: block;
+  max-height: 600px; /* Augmentez cette valeur selon vos besoins */
+  overflow-y: scroll; /* Ajoute une barre de défilement verticale */
+}
+
+.table__body table {
+  width: 100%; /* Pour que le tableau occupe toute la largeur de la section */
+  border-collapse: collapse;
+}
+
+.table__body th, .table__body td {
+  padding: 12px; /* Augmenter le padding pour agrandir les cellules */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table__body::-webkit-scrollbar {
+  width: 10px; /* Largeur de la barre de défilement */
+}
+
+.table__body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Couleur de la piste de défilement */
+}
+
+.table__body::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur de la barre de défilement */
+}
+
+.table__body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Couleur de la barre de défilement au survol */
+}
+
+.table__header h1 {
+  font-size: 24px; /* Augmenter la taille de la police pour le titre */
+}
+
+.table__body th {
+  font-size: 18px; /* Augmenter la taille de la police pour les en-têtes */
+}
+
+.table__body td {
+  font-size: 16px; /* Augmenter la taille de la police pour les cellules */
+}
+.table {
+  margin-top: 10px; /* Ajoute de l'espace en haut de la table */
+  margin-bottom: 10px;
+}
+
+
+
+
+.table-container {
+  max-height: 80vh; /* Ajustez la hauteur selon vos besoins */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+
+.swiper-button-next, .swiper-button-prev {
+    color: #fff;
+}
+
+
+.slider{
+    position: relative;
+    width: 80%;
+    height: 370px;
+    overflow: hidden;
+}
+.item{
+    position: absolute;
+    width: 490px;
+    height: 200px;
+    text-align: justify;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 110px);
+    top: 0;
+}
+#next, #prev{
+    position: absolute;
+    top: 40%;
+    color: rgb(65, 34, 5);
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 300px;
+}
+#next{
+    left: unset;
+    right: 40px;
+}
+
+
+ /* Styles par défaut */
+.main-head {
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  height: 60px; /* Taille fixe du logo */
+}
+
+.decto {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.decto li {
+  margin: 0 15px;
+}
+
+.decto a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Media query pour écrans de moins de 768px */
+@media screen and (max-width: 768px) {
+  .main-head {
+      padding: 20px; /* Pas de changement de padding */
+  }
+
+  nav {
+      flex-direction: row; /* Pas de changement de direction */
+      align-items: center; /* Pas de changement d'alignement */
+  }
+
+  #logo {
+      height: 60px; /* Pas de changement de taille */
+  }
+
+  .decto {
+      display: flex; /* Pas de changement dans l'affichage */
+      flex-direction: row; /* Pas de changement de direction */
+  }
+
+  .decto li {
+      margin: 0 15px; /* Pas de changement de marges */
+  }
+
+  
+}
+
+body {
+  font-size: 16px;
+  margin: 50px;
+}
+
+/* Style pour les petits écrans (comme un mobile) */
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 14px;
+      margin: 10px;
+  }
+}
+      </style>
+</head>
+<body>
+  <header class="main-head">
+    <nav>
+        <img src="logo.png" id="logo">
+        <ul class="decto">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#prefecture">Préfectures et Provinces</a></li>
+            <li><a href="#programme">Programme de la préfécture</a></li>
+            <li><a href="#a-visiter">À visiter</a></li>
+            <li><a href="#actualite">Actualités et nouveautés</a></li>
+            <li><a href="#chronologie-historique">Chronologie Historique</a></li>
+            <li><a href="#population">La population</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <section class="hero">
+        <h2 id="titre">Préfécture Oujda Angad</h2>
+        <h5>Vous souhaite les bienvenus</h5>
+    </section>
+    <section>
+       <p id="desc">Située dans l'est du Maroc, proche de la frontière algérienne, <span>Oujda </span> est la capitale de la région de l'Oriental.<br>
+         La ville est connue pour son riche patrimoine historique et culturel. Oujda abrite plusieurs monuments historiques, tels que la médina,<br>
+          avec ses ruelles étroites et ses marchés animés, ainsi que <span>la mosquée Al Jamaa Al Kabir</span>, construite au XIIIe siècle. La ville est également <br>
+          célèbre pour ses festivals, notamment <span>le Festival international du Raï</span>, qui célèbre la musique Raï et attire des visiteurs du monde entier.<br><br>
+        La région environnante d'Oujda est dotée de paysages variés, allant des montagnes<span> des Beni-Snassen </span> aux plaines fertiles. Les visiteurs peuvent <br>
+        explorer les sources <span>thermales de Sidi Yahya et les forêts de Tafoughalt </span>, offrant de nombreuses possibilités de randonnées et d'activités de plein air.<br><br>
+        En matière de gastronomie, Oujda se distingue par ses spécialités culinaires uniques, telles que le "msemmen", une sorte de crêpe feuilletée. La ville <br>
+        est un mélange fascinant de traditions marocaines et d'influences modernes, faisant d'Oujda une destination incontournable pour les voyageurs cherchant <br>
+        à découvrir l'authenticité du Maroc.<br>
+    </section>
+        <section class="section intro">
+            <div class="container">
+              <H1 class="chrono" id="chronologie-historique" >Chronologie Historique d'Oujda</H1>
+            </div>
+          </section>
+          <section class="timeline">
+            <div class="info">
+              <h2 class="date">Les dates les plus importantes.</h2>
+            </div>
+            <ol>
+              <li>
+                <div>
+                  <time>994</time> Fondation de la ville : Oujda est fondée par Ziri ibn Atiyya, chef de la tribu des Maghraouas.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2014</time> inauguré en 2014 par SM le Roi Mohammed VI, cet édifice a donné une forte impulsion au paysage culturel et artistique dans la ville d'Oujda
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2014</time> nauguré par Sa Majesté le Roi Mohammed VI en juillet 2014, le CHU Mohammed VI d'Oujda est une icône rayonnante de la santé au niveau régional, national et international
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2014</time> Le Parc Ecologique d'Oujda, également connu sous le nom de Jardin Lalla Aicha, a été créé en 2014. Ce parc est un espace vert important pour la ville, offrant un lieu de détente et de loisirs pour les habitants et les visiteurs.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2019</time> Le Stade d'Honneur d'Oujda, inauguré en 1976, a été rénové en 2019 pour moderniser ses installations et améliorer les conditions pour les événements sportifs et les spectateurs.
+                </div>
+              </li>
+              <li></li>
+            </ol>
+          </section>
+          <script>
+            window.console = window.console || function(t) {};
+          </script>
+          <br><br><br><br>
+
+      
+
+<br><br><br><br>
+
+<h1 class="demo-title" id="population">Le recensement général de la population d'Oujda (2014) </h1>
+<section class="todo">
+  <div class="pricing-table">
+    <div class="pricing-option">
+      <h1>Densité</h1>
+      <hr />
+      <p>321,9 hab/km²</p>
+      <div class="price">
+        <div class="front"></div>
+        <div class="back">
+          <a href="#" class="button modal-trigger-no-img" data-content="Avec une densité de 321,9 habitants par kilomètre carré, Oujda est moins densément peuplée que certaines grandes villes, mais reste relativement urbaine. Cette densité reflète un environnement où la ville est assez compacte tout en ayant des espaces ouverts et des quartiers variés.">Savoir plus</a>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-option">
+      <h1>Population</h1>
+      <hr />
+      <p>551.767 hab</p>
+      <hr />
+      <div class="price">
+        <div class="front"></div>
+        <div class="back">
+          <a href="#" class="button modal-trigger-no-img" data-content="Selon le dernier recensement de 2014, la ville d'Oujda comptait 506 274 habitants, soit un accroissement de plus de 3 % par an depuis 1982, malgré l'émigration et un essor freiné par la fermeture de la frontière (émigration et contrebande avec l'Algérie sont deux sources de revenus non négligeables).">Savoir plus</a>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-option">
+      <h1>Nombre de familles</h1>
+      <hr />
+      <p>113 020</p>
+      <hr />
+      <div class="price">
+        <div class="front"></div>
+        <div class="back">
+          <a href="#" class="button modal-trigger-no-img" data-content="Avec environ 113 020 familles à Oujda, cela donne une idée du nombre de foyers dans la ville. Si on divise la population totale (environ 500,000 habitants) par le nombre de familles, cela suggère une taille moyenne des ménages d'environ 4 à 5 personnes. Cela peut varier, bien sûr, en fonction des structures familiales et des dynamiques sociales locales.">Savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><br><br><br><br><br>
+
+<!-- Modal without image -->
+<div class="modal-container-no-img">
+  <div class="overlay" onclick="toggleModalNoImg()"></div>
+  <div class="modal">
+    <span class="close-modal" onclick="toggleModalNoImg()">&times;</span>
+    <h1 id="modalTitleNoImg"></h1>
+    <p id="dialogDescNoImg"></p>
+  </div>
+</div>
+
+
+
+<h1 class="nouveau" id="a-visiter">À visiter </h1>
+<section class="sect">
+  <div class="wrapper">
+    <div class="card">
+      <img src="grand-mosque.jpg" alt="Le grand mosque">
+      <div class="info">
+        <p class="qes">Le grand mosque</p>
+        <a href="#" class="btn modal-trigger" data-content="Située à Oujda, la grande mosquée Al Jamaa Al Kabir a traversé les siècles sans perdre de sa beauté. Ce superbe édifice religieux a en effet été construit en 1298 par le Sultan mérinide Abu Yaâcoub Yussuf puis il a été plusieurs fois rénové afin d'être conservé au mieux. C'est ainsi que cette prestigieuse et ancienne mosquée est aujourd'hui encore un chef d’œuvre de l'architecture marocco-andalouse." data-img-src="grand-mosque2.jpg">En savoir plus</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="theatre.jpg" alt="Le théâtre Mohammed VI">
+      <div class="info">
+        <p class="qes">Le théâtre Mohammed VI</p>
+        <a href="#" class="btn modal-trigger" data-content="Le Théâtre Mohammed VI à Oujda, sous la tutelle du Ministère de la Culture, promeut les activités culturelles et artistiques locales. Il s'étend sur 6500 m², dont 4900 m² couverts, et possède une salle de spectacles de 1200 places. Le théâtre offre également des salles privées pour les artistes, des coulisses, huit ateliers et un espace pour les invités d'honneur, renforçant ainsi la dynamique culturelle de la région." data-img-src="theatre2.jpg">En savoir plus</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="parc.jpg" alt="Parc Lala Aicha">
+      <div class="info">
+        <p class="qes">Parc Municipal Lalla Aïcha</p>
+        <a href="#" class="btn modal-trigger" data-content="Le Parc Municipal Lalla Aïcha, situé à Oujda, s'étend sur une superficie d'environ 20 hectares. Créé en 1935, il constitue un lieu de détente prisé pour les habitants de la ville. Le parc offre une belle aire de loisirs, incluant des piscines, des terrains de sports, des clubs de tennis et d'équitation, ainsi que des équipements de jeux pour enfants.
+        Ce parc est un lieu idéal pour passer du temps en famille, entre amis ou simplement pour se détendre et profiter des diverses activités proposées." data-img-src="parc2.jpg">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal with image -->
+<div class="modal-container">
+  <div class="overlay" onclick="toggleModal()"></div>
+  <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
+    <button aria-label="close modal" class="close-modal" onclick="toggleModal()">X</button>
+    <img id="modalImg" src="" alt="Image descriptive" style="width: 100%; height: auto; margin-bottom: 10px;">
+    <h1 id="modalTitle"></h1>
+    <p id="dialogDesc"></p>
+  </div>
+</div>
+
+
+<main class="table" id="customers_table">
+  <section class="table__header">
+  </section>
+  <h1 class="nouveau" id="prefecture">Préféctures et provinces </h1>
+
+  <section class="table__body">
+
+      <table>
+          <thead>
+              <tr>
+                  <th> Id <span class="icon-arrow"></span></th>
+                  <th> Nom de la Province<span class="icon-arrow"></span></th>
+                  <th> Description <span class="icon-arrow"></span></th>
+                  <th> Localisation (Carte) <span class="icon-arrow"></span></th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> 1 </td>
+              <td> Préfécture Oujda</td>
+              <td> La préfecture d'Oujda-Angad est une subdivision à dominante urbaine de la région marocaine de l'Oriental. </td>
+              <td> <img src="prefectue.png" alt=""> </td>
+          </tr>
+              <tr>
+                <td> 2 </td>
+                <td> Province de Driouch</td>
+                <td> La province de Driouch, d'une superficie de 2 867 km25, est située dans la région montagneuse du Rif, au nord-est du Maroc.</td>
+                <td> <img src="driouch.png" alt=""> </td>
+            </tr>
+            <tr>
+              <td> 3 </td>
+              <td> Province de berkane</td>
+              <td>  est une province de la région oriental, située à l'extrême nord-est du Maroc. </td>
+              <td> <img src="berkane.png" alt=""> </td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td> Province de Figuig </td>
+            <td> La province de Figuig est située à l'extrême sud-est du pays et au sud de la région de l'Oriental, </td>
+            <td> <img src="Morocco,_region_Oriental,_province_Figuig.png" alt=""> </td>
+        </tr>
+        <tr>
+          <td> 5 </td>
+          <td> Province de Guercif</td>
+          <td> La province de Guercif, d'une superficie de 7 307 km27, est située au nord-est du pays, en partie dans le Rif (nord), et en partie dans l'Atlas (sud). </td>
+          <td> <img src="geurcif.png" alt=""> </td>
+      </tr>
+      <tr>
+        <td> 6 </td>
+        <td> Province de Jerada </td>
+        <td> La province de Jerada s'étend sur 9 300 km2 au nord-est du pays2. </td>
+        <td> <img src="280px-Morocco,_region_Oriental,_province_Jerada.png" alt=""> </td>
+    </tr>
+    <tr>
+      <td> 7 </td>
+      <td> Province de Nador </td>
+      <td>  est une subdivision à dominante rurale de la région marocaine de l'Oriental. Elle tire son nom de son chef-lieu, Nador. La province fait partie du Rif Oriental avec la province de Driouch et de Taourirt.
+
+        Géographie </td>
+      <td> <img src="Morocco,_region_Oriental,_province_Nador.png" alt=""> </td>
+  </tr>
+  <tr>
+    <td> 8 </td>
+    <td> Province de Taourirt</td>
+    <td>est une subdivision à dominante rurale de la région marocaine de l’Oriental. Elle tire son nom de son chef-lieu, Taourirt. </td>
+    <td> <img src="Morocco,_region_Oriental,_province_Taourirt.png" alt=""> </td>
+</tr>    
+  
+          </tbody>
+      </table>
+  </section>
+</main>
+<br><br><br><br>
+<h1 class="demo-title">Actualités et nouveautés</h1>
+<section class="sect" id="actualite">
+  <div class="wrapper">
+    <div class="card">
+      <img src="Chambre.jpg" >
+      <div class="info">
+        <p class="qes">Chambre des Représentants: clôture jeudi de la 2ème session de l’actuelle année législative</p>
+        <a href="#" ></a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="throne.PNG" >
+      <div class="info">
+        <p class="qes">Fête du Trône au Maroc le 30 Juillet 2024 : Un Jour de Patriotisme et de Fierté Nationale</p>
+        <a href="#" ></a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="mre.jpg" >
+      <div class="info">
+        <p class="qes">Agence urbaine Rabat-Salé : une série de mesures pour accueillir les MRE</p>
+        <a href="#" ></a>
+      </div>
+    </div>
+  </div>
+</section>
+    <br><br> <br><br>
+    
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons.../dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+const modalContainerNoImg = document.querySelector(".modal-container-no-img");
+const modalTriggersNoImg = document.querySelectorAll(".modal-trigger-no-img");
+const modalDescNoImg = document.getElementById("dialogDescNoImg");
+
+const modalContainer = document.querySelector(".modal-container");
+const modalTriggers = document.querySelectorAll(".modal-trigger");
+const modalDesc = document.getElementById("dialogDesc");
+const modalImg = document.getElementById("modalImg");
+
+modalTriggersNoImg.forEach(trigger => {
+  trigger.addEventListener("click", function(event) {
+    event.preventDefault();
+    const content = this.getAttribute("data-content");
+    modalDescNoImg.textContent = content;
+    toggleModalNoImg();
+  });
+});
+
+function toggleModalNoImg() {
+  modalContainerNoImg.classList.toggle("active");
+}
+
+modalTriggers.forEach(trigger => {
+  trigger.addEventListener("click", function(event) {
+    event.preventDefault();
+    const content = this.getAttribute("data-content");
+    const imgSrc = this.getAttribute("data-img-src");
+    modalDesc.textContent = content;
+    modalImg.src = imgSrc;
+    toggleModal();
+  });
+});
+
+function toggleModal() {
+  modalContainer.classList.toggle("active");
+}
+    </script>
+
+<script>
+  let items = document.querySelectorAll('.slider .item');
+    let next = document.getElementById('next');
+    let prev = document.getElementById('prev');
+    
+    let active = 3;
+    function loadShow(){
+        let stt = 0;
+        items[active].style.transform = `none`;
+        items[active].style.zIndex = 1;
+        items[active].style.filter = 'none';
+        items[active].style.opacity = 1;
+        for(var i = active + 1; i < items.length; i++){
+            stt++;
+            items[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+            items[i].style.zIndex = -stt;
+            items[i].style.filter = 'blur(5px)';
+            items[i].style.opacity = stt > 2 ? 0 : 0.6;
+        }
+        stt = 0;
+        for(var i = active - 1; i >= 0; i--){
+            stt++;
+            items[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+            items[i].style.zIndex = -stt;
+            items[i].style.filter = 'blur(5px)';
+            items[i].style.opacity = stt > 2 ? 0 : 0.6;
+        }
+    }
+    loadShow();
+    next.onclick = function(){
+        active = active + 1 < items.length ? active + 1 : active;
+        loadShow();
+    }
+    prev.onclick = function(){
+        active = active - 1 >= 0 ? active - 1 : active;
+        loadShow();
+    }
+</script>
+
+</body>
+</html>
