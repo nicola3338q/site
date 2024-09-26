@@ -11,88 +11,14 @@
         window.console = window.console || function(t) {};
       </script>
       <style>
-          .container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px; /* Ajuste ce chiffre selon ton besoin */
-    margin: auto; /* Centrer le conteneur */
-}
-
-          .card {
-    flex: 1 1 200px; /* Change le minimum à 150px si besoin */
-    max-width: 280px; /* La largeur maximale que tu veux */
-    margin: 10px; /* Ajoute un peu d'espace entre les cartes */
-}
-
-          @media (max-width: 600px) {
-    h1 {
-        font-size: 1.5rem; /* Réduit la taille des titres */
-    }
-
-    .card {
-        width: 90%; /* Prend 90% de la largeur de l'écran */
-        margin: 10px auto; /* Centrer les cartes */
-    }
-
-    #desc {
-        padding-left: 10px; /* Réduire le padding */
-        margin-left: 0; /* Supprimer le margin */
-        padding-top: 20px; /* Ajuster le padding */
-    }
-}
-
-          img {
-    max-width: 100%; /* Cela devrait déjà être dans ton code */
-    height: auto; /* Pour garder le ratio */
-}
-
-          
-          .container {
-    width: 90%; /* 90% de la largeur de l'écran */
-    max-width: 1200px; /* Maximum de 1200px pour les grands écrans */
-}
-/* Style par défaut */
-body {
-    font-size: 16px;
-}
-
-/* Pour les écrans de moins de 600px */
-@media (max-width: 600px) {
-    body {
-        font-size: 14px; /* Réduit la taille de la police pour les petits écrans */
-    }
-}
-/* Style par défaut */
-body {
-    font-size: 16px;
-}
-
-/* Pour les écrans de moins de 600px */
-@media screen and (max-width: 2000px) {
-    body {
-        font-size: 14px; /* Réduit la taille de la police pour les petits écrans */
-    }
-}
-/* Exemple de Flexbox */
-.container {
-    display: flex;
-    flex-direction: column; /* Aligne les éléments en colonne */
-}
-
-/* Exemple de Grid */
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Crée une grille qui s'adapte */
-}
-
-        * {
+          * {
   margin: 0;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
   box-sizing: border-box;
 }
-@media screen and (max-width: 3000px) {
+@media (max-width: 768px) {
   nav ul {
     display: block;
     text-align: center;
@@ -111,7 +37,7 @@ img {
 body {
   font-size: 1rem; /* responsive base font size */
 }
-@media screen and  (max-width: 3000px) {
+@media (max-width: 600px) {
   table {
     display: block;
     overflow-x: auto;
@@ -159,101 +85,59 @@ nav {
   justify-content: flex-end;
   align-items: center;
   margin: auto;
-  padding: 0 5%; /* Utilisation de pourcentages pour rendre le padding flexible */
+  padding: 0 20px;
 }
 
 nav h1 {
   margin-right: auto;
 }
-
 ul {
   display: flex;
   justify-content: center;
-  font-size: 1.1em; /* Unité relative, légèrement réduite */
+  font-size: 1.2em;
   align-items: center;
   margin-left: auto;
 }
-
 ul li {
   list-style: none;
-  margin-left: 3vw; /* Utilisation de 'vw' (viewport width) pour ajuster à la largeur de l'écran */
-  font-size: 0.9rem; /* Taille un peu réduite pour une meilleure lisibilité sur des écrans plus petits */
+  margin-left: 62px;
+  font-size: 1rem;
 }
-
 ul li a {
   color: #b69267;
   font-family: Arial, sans-serif;
   font-weight: bold;
   transition: color 0.4s ease-in-out;
 }
-
 ul li a:hover {
   color: rgb(10, 47, 95);
-}/* Logo adaptatif */
-#logo {
-  height: 10vw; /* 10% de la largeur de la fenêtre */
-  width: 10vw;  /* La largeur et la hauteur du logo sont proportionnelles à la largeur de l'écran */
-  max-width: 90px; /* Limite maximale du logo */
-  max-height: 90px;
 }
-
-/* Titre adaptatif */
+#logo {
+  height: 90px;
+  width: 90px;
+}
 #titre {
   text-align: center;
   font-style: oblique;
   line-height: 1;
   font-weight: bold;
-  font-size: 80vw; /* Utilisation de 'vw' pour ajuster la taille selon la largeur de l'écran */
+  font-size: 120%;
   font-family: 'mega_freshregular';
-  max-font-size: 300px; /* Limite maximale pour les grands écrans */
 }
-
-/* Hero section */
 .hero {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  min-height: 100vh; /* La section occupe 100% de la hauteur de la fenêtre */
-  background: url("hih.jpg") no-repeat center center/cover;
+  min-height: 90vh;
+  background: url("hih.jpg");
+  background-size: cover;
+  background-position: center;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 50px solid #b69267;
+  border-bottom: 80px solid #b69267;
 }
-
-/* Media Queries pour les tablettes et téléphones */
-@media screen and (max-width: 3000px) {
-  #logo {
-    height: 40vw; /* Ajustement du logo pour les tablettes */
-    width: 40vw;
-  }
-
-  #titre {
-    font-size: 20vw; /* Ajustement du titre pour les écrans plus petits */
-  }
-
-  .hero {
-    min-height: 80vh; /* Ajustement de la hauteur pour les écrans de tablettes */
-  }
-}
-
-@media screnn and (max-width: 3000px) {
-  #logo {
-    height: 15vw; /* Plus grand sur les petits écrans */
-    width: 15vw;
-  }
-
-  #titre {
-    font-size: 5vw; /* Ajustement pour les téléphones */
-  }
-
-  .hero {
-    min-height: 70vh; /* Réduire la hauteur pour les très petits écrans */
-  }
-}
-
-
 
 #desc {
   padding-left: 150px;
@@ -551,7 +435,7 @@ font-weight: bold;
 margin-bottom: 8px;
 color: var(--midnight-green);
 }
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 800px) {
 .timeline {
   display: block;
 }
@@ -710,13 +594,13 @@ a.social:not(:last-child) {
   margin-right: 10px;
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 900px) {
   .footer-top {
     justify-items: start;
   }
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 660px) {
   footer {
     padding: 30px;
   }
@@ -1279,6 +1163,19 @@ nav {
   }
 
   
+}
+
+body {
+  font-size: 16px;
+  margin: 50px;
+}
+
+/* Style pour les petits écrans (comme un mobile) */
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 14px;
+      margin: 10px;
+  }
 }
 
 body {
