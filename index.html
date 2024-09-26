@@ -189,69 +189,70 @@ ul li a {
 
 ul li a:hover {
   color: rgb(10, 47, 95);
-}
-
+}/* Logo adaptatif */
 #logo {
-  height: 8vw; /* Taille relative à la largeur de l'écran */
-  width: 8vw;  /* Taille relative à la largeur de l'écran */
-  max-width: 90px; /* Limite maximale */
+  height: 10vw; /* 10% de la largeur de la fenêtre */
+  width: 10vw;  /* La largeur et la hauteur du logo sont proportionnelles à la largeur de l'écran */
+  max-width: 90px; /* Limite maximale du logo */
   max-height: 90px;
 }
 
+/* Titre adaptatif */
 #titre {
   text-align: center;
   font-style: oblique;
   line-height: 1;
   font-weight: bold;
-  font-size: 10vw; /* Utilisation de 'vw' pour une taille responsive */
+  font-size: 8vw; /* Utilisation de 'vw' pour ajuster la taille selon la largeur de l'écran */
   font-family: 'mega_freshregular';
   max-font-size: 120px; /* Limite maximale pour les grands écrans */
 }
 
+/* Hero section */
 .hero {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  min-height: 90vh; /* La section prend 90% de la hauteur de l'écran */
-  background: url("hih.jpg");
-  background-size: cover;
-  background-position: center;
+  min-height: 100vh; /* La section occupe 100% de la hauteur de la fenêtre */
+  background: url("hih.jpg") no-repeat center center/cover;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 10vw solid #b69267; /* Taille relative pour la bordure */
+  border-bottom: 50px solid #b69267;
 }
 
-/* Media Queries pour les petits écrans (téléphones) */
+/* Media Queries pour les tablettes et téléphones */
 @media (max-width: 768px) {
   #logo {
-    height: 12vw; /* Agrandir un peu pour les téléphones */
+    height: 12vw; /* Ajustement du logo pour les tablettes */
     width: 12vw;
-    max-width: 70px;
-    max-height: 70px;
   }
 
   #titre {
-    font-size: 8vw; /* Réduire la taille du titre pour les petits écrans */
+    font-size: 6vw; /* Ajustement du titre pour les écrans plus petits */
   }
 
   .hero {
-    border-bottom: 15vw solid #b69267; /* Bordure légèrement plus grande sur les petits écrans */
+    min-height: 80vh; /* Ajustement de la hauteur pour les écrans de tablettes */
   }
 }
 
-/* Media Queries pour les très petits écrans (moins de 480px de largeur) */
 @media (max-width: 480px) {
+  #logo {
+    height: 15vw; /* Plus grand sur les petits écrans */
+    width: 15vw;
+  }
+
   #titre {
-    font-size: 6vw; /* Réduire encore plus la taille du titre */
+    font-size: 5vw; /* Ajustement pour les téléphones */
   }
 
   .hero {
-    min-height: 80vh; /* Ajuster la hauteur pour les très petits écrans */
-    border-bottom: 20vw solid #b69267; /* Bordure plus large pour équilibre visuel */
+    min-height: 70vh; /* Réduire la hauteur pour les très petits écrans */
   }
 }
+
 
 
 #desc {
