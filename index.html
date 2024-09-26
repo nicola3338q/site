@@ -159,45 +159,55 @@ nav {
   justify-content: flex-end;
   align-items: center;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 5%; /* Utilisation de pourcentages pour rendre le padding flexible */
 }
 
 nav h1 {
   margin-right: auto;
 }
+
 ul {
   display: flex;
   justify-content: center;
-  font-size: 1.2em;
+  font-size: 1.1em; /* Unité relative, légèrement réduite */
   align-items: center;
   margin-left: auto;
 }
+
 ul li {
   list-style: none;
-  margin-left: 62px;
-  font-size: 1rem;
+  margin-left: 3vw; /* Utilisation de 'vw' (viewport width) pour ajuster à la largeur de l'écran */
+  font-size: 0.9rem; /* Taille un peu réduite pour une meilleure lisibilité sur des écrans plus petits */
 }
+
 ul li a {
   color: #b69267;
   font-family: Arial, sans-serif;
   font-weight: bold;
   transition: color 0.4s ease-in-out;
 }
+
 ul li a:hover {
   color: rgb(10, 47, 95);
 }
+
 #logo {
-  height: 90px;
-  width: 90px;
+  height: 8vw; /* Taille adaptative selon la largeur de l'écran */
+  width: 8vw;  /* Taille adaptative selon la largeur de l'écran */
+  max-width: 90px; /* Limite maximale pour éviter qu'il ne devienne trop grand */
+  max-height: 90px; 
 }
+
 #titre {
   text-align: center;
   font-style: oblique;
   line-height: 1;
   font-weight: bold;
-  font-size: 120px;
+  font-size: 10vw; /* Utilisation de 'vw' pour une taille responsive du texte */
   font-family: 'mega_freshregular';
+  max-font-size: 120px; /* Limite maximale pour grands écrans */
 }
+
 .hero {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   min-height: 90vh;
