@@ -192,10 +192,10 @@ ul li a:hover {
 }
 
 #logo {
-  height: 8vw; /* Taille adaptative selon la largeur de l'écran */
-  width: 8vw;  /* Taille adaptative selon la largeur de l'écran */
-  max-width: 90px; /* Limite maximale pour éviter qu'il ne devienne trop grand */
-  max-height: 90px; 
+  height: 8vw; /* Taille relative à la largeur de l'écran */
+  width: 8vw;  /* Taille relative à la largeur de l'écran */
+  max-width: 90px; /* Limite maximale */
+  max-height: 90px;
 }
 
 #titre {
@@ -203,14 +203,14 @@ ul li a:hover {
   font-style: oblique;
   line-height: 1;
   font-weight: bold;
-  font-size: 10vw; /* Utilisation de 'vw' pour une taille responsive du texte */
+  font-size: 10vw; /* Utilisation de 'vw' pour une taille responsive */
   font-family: 'mega_freshregular';
-  max-font-size: 400%; /* Limite maximale pour grands écrans */
+  max-font-size: 120px; /* Limite maximale pour les grands écrans */
 }
 
 .hero {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  min-height: 90vh;
+  min-height: 90vh; /* La section prend 90% de la hauteur de l'écran */
   background: url("hih.jpg");
   background-size: cover;
   background-position: center;
@@ -220,8 +220,39 @@ ul li a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 80px solid #b69267;
+  border-bottom: 10vw solid #b69267; /* Taille relative pour la bordure */
 }
+
+/* Media Queries pour les petits écrans (téléphones) */
+@media (max-width: 768px) {
+  #logo {
+    height: 12vw; /* Agrandir un peu pour les téléphones */
+    width: 12vw;
+    max-width: 70px;
+    max-height: 70px;
+  }
+
+  #titre {
+    font-size: 8vw; /* Réduire la taille du titre pour les petits écrans */
+  }
+
+  .hero {
+    border-bottom: 15vw solid #b69267; /* Bordure légèrement plus grande sur les petits écrans */
+  }
+}
+
+/* Media Queries pour les très petits écrans (moins de 480px de largeur) */
+@media (max-width: 480px) {
+  #titre {
+    font-size: 6vw; /* Réduire encore plus la taille du titre */
+  }
+
+  .hero {
+    min-height: 80vh; /* Ajuster la hauteur pour les très petits écrans */
+    border-bottom: 20vw solid #b69267; /* Bordure plus large pour équilibre visuel */
+  }
+}
+
 
 #desc {
   padding-left: 150px;
