@@ -11,7 +11,8 @@
         window.console = window.console || function(t) {};
       </script>
       <style>
-          * {
+
+        * {
   margin: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -121,7 +122,7 @@ ul li a:hover {
   font-style: oblique;
   line-height: 1;
   font-weight: bold;
-  font-size: 120%;
+  font-size: 120px;
   font-family: 'mega_freshregular';
 }
 .hero {
@@ -435,21 +436,7 @@ font-weight: bold;
 margin-bottom: 8px;
 color: var(--midnight-green);
 }
-@media screen and (max-width: 800px) {
-.timeline {
-  display: block;
-}
-.timeline::before,
-.timeline::after {
-  width: 50px;
-}
-.timeline::before {
-  left: 0;
-}
-.timeline .info {
-  display: none;
-}
-}
+
 .page-footer {
 position: fixed;
 right: 0;
@@ -1171,24 +1158,21 @@ body {
 }
 
 /* Style pour les petits écrans (comme un mobile) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1110px) {
   body {
-      font-size: 14px;
-      margin: 10px;
+      width:890px;
   }
+
+  #desc {
+     width: 700px;
+}
+#logo {
+  width:800px;
+}
+.timeline{
+  width:900px;
 }
 
-body {
-  font-size: 16px;
-  margin: 50px;
-}
-
-/* Style pour les petits écrans (comme un mobile) */
-@media screen and (max-width: 768px) {
-  body {
-      font-size: 14px;
-      margin: 10px;
-  }
 }
       </style>
 </head>
@@ -1223,7 +1207,7 @@ body {
         est un mélange fascinant de traditions marocaines et d'influences modernes, faisant d'Oujda une destination incontournable pour les voyageurs cherchant <br>
         à découvrir l'authenticité du Maroc.<br>
     </section>
-        <section class="section intro">
+        <section class="section-intro">
             <div class="container">
               <H1 class="chrono" id="chronologie-historique" >Chronologie Historique d'Oujda</H1>
             </div>
