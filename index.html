@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1172,6 +1173,30 @@ body {
 .timeline{
   width:900px;
 }
+
+table {
+    width: 100%; /* Le tableau prend toute la largeur de son conteneur */
+    border-collapse: collapse; /* Élimine les espaces entre les cellules */
+  }
+
+  th, td {
+    border: 1px solid #ddd; /* Bordure autour des cellules */
+    padding: 8px; /* Espacement interne des cellules */
+    text-align: left; /* Alignement du texte à gauche */
+  }
+
+  th {
+    background-color: #f2f2f2; /* Couleur de fond des en-têtes */
+  }
+
+  /* Largeur spécifique pour la colonne de description */
+  td:nth-child(3) {
+    width: 40%; /* Ajuste cette valeur selon tes besoins */
+    max-width: 300px; /* Optionnel : limite la largeur maximale */
+    overflow: hidden; /* Cache le texte qui déborde */
+    word-wrap: break-word; /* Permet de couper les mots pour éviter le débordement */
+    white-space: normal; /* Permet au texte de passer à la ligne */
+  }
 
 }
       </style>
